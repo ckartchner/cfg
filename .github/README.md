@@ -8,7 +8,7 @@ EG: `config add .vimrc` to add a new file or update to the git staging area
 
 ## Install instructions
 How to add to a new machine
-```
+```bash
 sh -c "$(curl https://raw.githubusercontent.com/ckartchner/cfg/main/.bin/install.sh -L)"
 ```
 
