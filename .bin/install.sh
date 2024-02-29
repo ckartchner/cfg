@@ -1,4 +1,6 @@
-git clone --bare git@github.com:ckartchner/cfg.git $HOME/.cfg
+mkdir -p $HOME/.cfg
+# use https when cloning to avoid need to setup ssh keys first
+git clone --bare https://github.com/ckartchner/cfg.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
