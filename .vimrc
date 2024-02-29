@@ -10,22 +10,20 @@ set smartindent  "indent intelligently when adding a newline
 set ignorecase   "use case insensitive search by default
 set hidden       "make buffers more usable
 set number       "show line numbers
-set bs=2         "allow backspacing over everything in insert mode; default in debian.vim
-set ruler        "Display line and column number at bottom of screen; default in debian.vim
+set bs=2         "allow backspacing over everything in insert mode
+set ruler        "Display line and column number at bottom of screen
 set showcmd      "show keystrokes in the status line. Useful for identifying active modifier keys such as the dreaded q
-"set showmatch   "show matching bracket when bracket is highlighted
-"set wildchar=<TAB> "Character used to do wildcard expansion; default in Mint 18.2
-"set t_Co=256    "use 256 colors in vim, very impt for most colorschemes; default in Mint 18.2
+set showmatch    "show matching bracket when bracket is highlighted
 set background=dark
 colorscheme onedark
-"colorscheme molokai
-"colorscheme elflord
 
 " Show whitespace per: https://askubuntu.com/questions/74485/how-to-display-hidden-characters-in-vim#74503
 set list
-set listchars=tab:→\ ,multispace:·,nbsp:␣,trail:•,precedes:«,extends:»
-"set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,precedes:«,extends:»
-"set listchars=tab:→\ ,nbsp:␣,trail:•,precedes:«,extends:»
+"use utf-8 characters to display 'hidden' chars where supported
+"debian docker container does not support them by default
+if $LANG =~ '\(UTF\|utf\)-\?8' || $LC_CTYPE =~ '\(UTF\|utf\)-\?8'
+    set listchars=tab:→\ ,multispace:·,nbsp:␣,trail:•,precedes:«,extends:»
+endif
 
 set spell spelllang=en_us  "enable spellcheck
 
