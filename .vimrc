@@ -1,13 +1,13 @@
 set nocompatible "Use Vim defaults (much better!)
 set ai           "always set autoindenting on
-set ts=4         "tab stop"
-set incsearch    "incremental searching"
-set hlsearch     "highlight all"
-set shiftwidth=4 "number of spaces to use of (auto)indent
-set expandtab    "Do not write tab character.  Spaces instead.
-set softtabstop=4 "Still let backspace work as though they were tabs.
-set smartindent
-set ignorecase   "makes searching case insensitive
+set incsearch    "incremental searching
+set hlsearch     "highlight all
+set expandtab    "in insert mode, pressing tab uses tabstop number of spaces
+set tabstop=4    "number of spaces used by tab
+set shiftwidth=4 "number of spaces to use for (auto)indent
+set softtabstop=4 "allow backspace work as though they were tabs
+set smartindent  "indent intelligently when adding a newline
+set ignorecase   "use case insensitive search by default
 set hidden       "make buffers more usable
 set number       "show line numbers
 set bs=2         "allow backspacing over everything in insert mode; default in debian.vim
