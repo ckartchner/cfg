@@ -9,7 +9,9 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #add anaconda to path
-PATH="/home/carlin/miniconda3/bin:$PATH"
+if [ -d $/miniconda3/bin ]; then
+  PATH="$/miniconda3/bin:$PATH"
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/carlin/.oh-my-zsh
