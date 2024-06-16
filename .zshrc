@@ -14,7 +14,7 @@ if [ -d $/miniconda3/bin ]; then
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/carlin/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -167,3 +167,5 @@ fi
 # alias used to manage "bare-repo" git config
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
+# If Haskell installed, make it useable
+[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
