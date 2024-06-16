@@ -1,0 +1,3 @@
+# Access ipython from debugger
+alias ipy from Ipython import embed; embed()
+
